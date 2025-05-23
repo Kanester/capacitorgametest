@@ -5,10 +5,10 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter({
-		  fallback: "index.html"
+			fallback: 'index.html'
 		}),
 		paths: {
-			base: '/capacitorgametest'
+			base: './'
 		}
 	}
 };
