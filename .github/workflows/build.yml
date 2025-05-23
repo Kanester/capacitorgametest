@@ -68,8 +68,8 @@ jobs:
         run: pnpm cap sync android
 
       - name: Build APK
-        run: cd android && ./gradlew assembleRelease
-        
+        run: cd android && ./gradlew assembleDebug
+
       - name: Check APK exists
         run: |
           ls -lh android/app/build/outputs/apk/release/
@@ -78,4 +78,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-release.apk
-          path: android/app/build/outputs/apk/release/app-release-unsigned.apk
+          path: android/app/build/outputs/apk/release/app-debug.apk
