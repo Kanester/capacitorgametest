@@ -42,11 +42,11 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        env:
-          BUILD_TARGET: web
         run: pnpm install
 
       - name: Build
+        env:
+          BUILD_TARGET: web
         run: pnpm build
 
       - name: Upload build directory
