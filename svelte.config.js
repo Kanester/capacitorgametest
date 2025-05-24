@@ -8,7 +8,7 @@ const config = {
 			fallback: 'index.html'
 		}),
 		paths: {
-			base: ''
+			base: process.env.BUILD_TARGET == 'web' ? '/capacitorgametest' : ''
 		}
 	}
 };
