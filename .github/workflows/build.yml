@@ -73,6 +73,13 @@ jobs:
       - name: Decode keystore
         run: |
           echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > my-release-key.keystore
+          ls -lh my-release-key.keystore
+
+      - name: List files
+        run: ls -lh
+
+      - name: Show keystore details
+        run: file my-release-key.keystore
 
       - name: Sign APK
         run: |
